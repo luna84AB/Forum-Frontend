@@ -1,0 +1,8 @@
+// REACT_APP_base_url='http://localhost:400'
+
+
+
+// on appj.s=
+// 'http://localhost:400/api/users  ==>const userRes=awit axios.get(`${process.env.REACT_APP_base_url}/api/users`,{
+
+// })
