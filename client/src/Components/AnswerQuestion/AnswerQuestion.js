@@ -13,7 +13,7 @@ const AnswerQuestion = ({ questionId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/answers", {
+      await axios.post(`${process.env.REACT_APP_base_url}/api/answers`, {
         id: userData.user.id,
         questionId: questionId,
         answer: form.answer,

@@ -13,7 +13,7 @@ const navigate = useNavigate();
   const questionByPostId = async () => {
     try {
       const question = await axios.get(
-        `http://localhost:4000/api/questions/${params.id}`
+        `${process.env.REACT_APP_base_url}/api/questions/${params.id}`
       );
       setQuestion(question.data.data);
     } catch (err) {
@@ -23,7 +23,7 @@ const navigate = useNavigate();
   const answersByQuestionId = async () => {
     try {
       const answersRes = await axios.get(
-        `http://localhost:4000/api/answers/${question?.question_id}`
+        `${process.env.REACT_APP_base_url}/api/answers/${question?.question_id}`
       );
       setAnswers(answersRes.data.data);
         Navigate("/questions/question?.question_id");

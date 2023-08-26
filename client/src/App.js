@@ -24,7 +24,7 @@ function App() {
       token = "";
     } else   {
       try{
-      const userRes = await axios.get("http://localhost:4000/api/users", {
+      const userRes = await axios.get(`${process.env.REACT_APP_base_url}/api/users`, {
         headers: { "x-auth-token": token },
       });
       // console.log(userRes);
